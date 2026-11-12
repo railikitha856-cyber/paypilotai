@@ -1,0 +1,3 @@
+import { Search, Bell, ChevronDown, Menu } from 'lucide-react'
+import BackendStatus from './BackendStatus.jsx'
+export default function Header({onMenu, pageTitle = 'Overview'}){return <header className="topbar"><button className="mobile-menu" aria-label="Toggle navigation" onClick={onMenu}><Menu size={20}/></button><div className="breadcrumbs"><span>Workspace</span><b>/</b><strong>{pageTitle}</strong></div><div className="topbar-actions"><BackendStatus/><button className="search-box"><Search size={16}/><span>Search anything...</span><kbd>⌘ K</kbd></button><button className="icon-button notification" aria-label="Notifications"><Bell size={18}/><i/></button><div className="top-user"><div className="top-avatar">AR</div><ChevronDown size={14}/></div></div></header>}
